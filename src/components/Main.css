@@ -1,0 +1,42 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+header{
+    color:yellow;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+}
+
+.heading{
+    font-size:40px;
+    padding:10px
+    
+}
+.sub-heading{
+    font-size:15px;
+    color:black
+}
+
+
+.button-container{
+    display:flex;
+    justify-content: center;
+    margin:4px 0px;
+    gap:10px;
+}
+.btn{
+    background-color:yellow;
+    padding:2px 26px;
+}
+
+.outer-main-container{}
+
+.pop-heading{
+    text-align:center;
+    font-size: 15px;
+}
