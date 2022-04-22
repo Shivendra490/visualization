@@ -1,7 +1,9 @@
 
-import countries_data from './Data/countries_data'
+import Countries_data from './Data/countries_data'
 
 const Calc = () => {
+  
+  let countries_data=Countries_data
     let i;
     let totalPop=0;
     
@@ -11,7 +13,9 @@ const Calc = () => {
    {
         totalPop=totalPop+countries_data[i].population;
         // console.log(i,pop)
+        
         const {languages}=countries_data[i]
+        //console.log(languages);
         for(let j of languages){
             if (lang.hasOwnProperty(j)){
               lang[j]=lang[j]+1
@@ -25,7 +29,7 @@ const Calc = () => {
         // console.log(lang,Object.keys(lang).length,"length of total lang......")
    }
   //  console.log(lang,Object.keys(lang).length,"length of total lang......")
-  //  const totalLangCount=Object.keys(lang).length
+   const totalLangCount=Object.keys(lang).length
   // console.log(lang,Object.keys(lang).length,'totallang')
   //  const sortLang=Object.keys(lang).sort((a,b)=>lang[b]-lang[a])
   //  console.log(sortLang,"sort lang ;........")
@@ -48,12 +52,14 @@ const sortLang=[]
      return 0
    })
 
-   console.log('calc',countries_data[0])
+  //  console.log('calc',countries_data[0])
+  console.log("total pop calc",totalPop)
 
 
 
-
-  return [countries_data,sortLang,totalPop]
+   //countries_data.unshift({name:'world',population:totalPop,languages:[]})
+  // return [countries_data,sortLang,totalPop]
+  return [countries_data,sortLang,totalLangCount,totalPop]
   
 }
 
